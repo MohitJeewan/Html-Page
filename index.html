@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #details-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="fetchDetails()">Show Details</button>
+    
+    <div id="details-container"></div>
+
+    <script>
+        function fetchDetails() {
+            // In a real-world scenario, you would fetch data from a server using AJAX or Fetch API
+            // For simplicity, a sample object is used here
+            const detailsData = {
+                name: 'John Doe',
+                age: 25,
+                city: 'Example City'
+            };
+
+            // Display details on the page
+            const detailsContainer = document.getElementById('details-container');
+            detailsContainer.innerHTML = `
+                <h2>${detailsData.name}</h2>
+                <p>Age: ${detailsData.age}</p>
+                <p>City: ${detailsData.city}</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
